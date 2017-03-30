@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class CommunityTaco extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,17 @@ class CommunityTaco extends Component {
 
   render() {
     return(
-      <h1>Hello World</h1>
+      <div className="">
+        <div className="">
+          <ul>
+            <li>Name:</li>
+            <li>Address:</li>
+            <li>Price:</li>
+            <li>Website:</li>
+            <li>Phone:</li>
+          </ul>
+        </div>
+      </div>
     )
   }
 

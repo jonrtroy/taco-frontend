@@ -9,7 +9,23 @@ class Dashboard extends Component {
 
   render() {
     return(
-      <h1>Hello World</h1>
+      <div>
+        <div className='container'>
+          <div className='taco-result'>
+            Taco Name
+            Address
+            Price
+            Website
+            Phone Number
+            <button className=''>Add to Favorite Tacos</button>
+          </div>
+          <div className='random-taco'>
+            <h2>More Tacos?</h2>
+            <button className=''>Find some more tacos</button>
+          </div>
+        </div>
+
+      </div>
     )
   }
 
