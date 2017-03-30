@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Route, Router, browserHistory } from "react-router";
+import { Route, Router, browserHistory } from 'react-router';
 
 
 import Dashboard from './components/Dashboard/Dashboard';
@@ -19,4 +19,4 @@ ReactDom.render(
     <Route path='/user/favorite' component={FavoriteTaco} />
     <Route path='/user/community' component={CommunityTaco} />
   </Router>
-, document.getElementById("app"));
+, document.getElementById('app'));
