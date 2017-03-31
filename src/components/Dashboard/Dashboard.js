@@ -40,8 +40,19 @@ class Dashboard extends Component {
     })
     .then((results) => {
       results.json().then((data) => {
+        // console.log('data', data);
+        let ratingFour = [];
+        for (let i = 0; i < data.length; i++) {
+          if(data[i].rating > 4) {
+            ratingFour.push(data[i]);
+            console.log('RAITINGFOUR', ratingFour);
+          }
+        }
+        console.log('RATING', ratingFour);
+        return this.setState({
+          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))]
+        });
         // Set the state of bars to be a random index number of the returned array
-        this.setState({tacos: data[Math.floor(Math.random() * data.length)]});
       });
     })
     .catch((err) => {
@@ -56,14 +67,27 @@ class Dashboard extends Component {
     })
     .then((results) => {
       results.json().then((data) => {
-        this.setState({tacos: data[Math.floor(Math.random() * data.length)]});
+        // console.log('data', data);
+        let ratingFour = [];
+        for (let i = 0; i < data.length; i++) {
+          // console.log('data', data[i].rating);
+          if(data[i].rating > 4) {
+            console.log('restaurant', data)
+            ratingFour.push(data[i]);
+            console.log('RATING', ratingFour);
+            // return this.setState({tacos: ratingFour[Math.floor(Math.random() * ratingFour.length)]});
+          }
+        }
+        return this.setState({
+          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))]
+        });
+        // Set the state of bars to be a random index number of the returned array
       });
     })
     .catch((err) => {
       console.log('ERROR: ', err);
     });
   }
-
 
 
   render() {
