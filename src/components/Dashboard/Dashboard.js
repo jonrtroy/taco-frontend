@@ -13,16 +13,16 @@ class Dashboard extends Component {
         }
       },
       tacos: {
-        name: 'Please',
-        rating: 'wait for',
+        name: '...',
+        rating: '...',
         location: {
           display_address: [
-          'your',
+          '...',
           ''
         ]
       },
-        display_phone: 'taco',
-        price: 'spot',
+        display_phone: '...',
+        price: '...',
         coordinates: {
           latitude: 40.766505,
           longitude: -73.986331
@@ -43,7 +43,7 @@ class Dashboard extends Component {
         // console.log('data', data);
         let ratingFour = [];
         for (let i = 0; i < data.length; i++) {
-          if(data[i].rating > 4) {
+          if(data[i].rating >= 4) {
             ratingFour.push(data[i]);
             console.log('RAITINGFOUR', ratingFour);
           }
@@ -71,11 +71,10 @@ class Dashboard extends Component {
         let ratingFour = [];
         for (let i = 0; i < data.length; i++) {
           // console.log('data', data[i].rating);
-          if(data[i].rating > 4) {
+          if(data[i].rating >= 4) {
             console.log('restaurant', data)
             ratingFour.push(data[i]);
             console.log('RATING', ratingFour);
-            // return this.setState({tacos: ratingFour[Math.floor(Math.random() * ratingFour.length)]});
           }
         }
         return this.setState({
