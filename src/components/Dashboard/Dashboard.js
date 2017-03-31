@@ -13,7 +13,16 @@ class Dashboard extends Component {
         }
       },
       tacos: {
-        name: '',
+        name: 'Please',
+        rating: 'wait for',
+        location: {
+          display_address: [
+          'your',
+          ''
+        ]
+      },
+        display_phone: 'taco',
+        price: 'spot',
         coordinates: {
           latitude: 40.766505,
           longitude: -73.986331

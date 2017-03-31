@@ -1,7 +1,6 @@
 import React from 'react';
 
 function DashboardTaco(props) {
-  (props.rating > 4);
   // Functionality to toggle colors between Open & Closed states
   let restaurantStatus;
   let statusStyle = {
@@ -13,6 +12,8 @@ function DashboardTaco(props) {
   } else {
     restaurantStatus = 'This Place is Closed';
   }
+
+
 
   return(
       <div>
