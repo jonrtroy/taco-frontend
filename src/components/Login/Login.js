@@ -1,47 +1,45 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
-import update from 'react-addons-update';
-
 
 class Login extends Component {
   constructor(props) {
     super(props);
 
-    this.state={
-      user: {
-        email: '',
-        password: ''
-      }
+    this.state = {
+      email: '',
+      password: ''
     };
   }
 
-  handleChange(event) {
-    let newState = update(this.state, {
-      user: {
-        $merge: {
-          [event.target.name]: event.target.value
-        }
-      }
-    });
-
-    this.setState(newState);
+  componentWillMount() {
+    if (localStorage.getItem('token')) {
+        browserHistory.push('/dashboard');
+    }
   }
+
+  handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    }
+
 
   // POST request
   handleSubmit(event) {
     event.preventDefault();
     fetch(`http://localhost:8000/users/login`, {
       method: 'POST',
+      body: JSON.stringify(this.state),
       headers: {
         'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state)
+      }
     })
     .then((results) => {
       results.json().then((jwt) => {
-        console.log('jwt in login component', jwt.token);
-        window.localStorage.setItem('MyToken', jwt.token);
-        // push to dashboard here once recipe model/controller are built out
+        let authUser = jwt.user;
+        window.localStorage.setItem('token', jwt.token);
+        window.localStorage.setItem('user', JSON.stringify(authUser));
+        console.log('Local User:', authUser)
         browserHistory.push('/dashboard');
       });
     })
@@ -57,13 +55,11 @@ class Login extends Component {
           <h1>Taco 4 You</h1>
 
           <h3>Login</h3>
-          <div className='form-container'>
+          <div id="login-page-div">
             <form onSubmit={this.handleSubmit.bind(this)}>
-              <input name='email' type='email' placeholder='email' onChange={this.handleChange.bind(this)} />
-              <br/>
-              <input name='password' type='password' placeholder='password' onChange={this.handleChange.bind(this)} />
-              <br/>
-              <button className='standard-btn' type='submit'>Log In</button>
+              <input placeholder="Email" name='email' type="email" onChange={this.handleChange.bind(this)}></input>
+              <input placeholder="Password" name="password" type="password" onChange={this.handleChange.bind(this)}></input>
+              <button type="submit">Log In</button>
             </form>
           </div>
         </div>

@@ -1,12 +1,18 @@
-import React, { Component } from "react";
-import update from "react-addons-update";
+import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
+import update from 'react-addons-update';
 
 class NewUser extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user:{}
+      user: {
+        firstname: '',
+        lastname: '',
+        email: '',
+        password_digest: ''
+      }
     };
   }
 
@@ -26,18 +32,25 @@ class NewUser extends Component {
 
     console.log(this.state.user);
 
-    fetch(`http://localhost:8000/users/signup`, {
+    fetch(`http://localhost:8000/users/new`, {
       method: 'POST',
-      body: JSON.stringify(this.state),
+      body: JSON.stringify(this.state.user),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then(() => {
-      this.props.router.push('/dashboard');
+    .then((results) => {
+      results.json().then((jwt) => {
+        let authUser = jwt.user;
+        window.localStorage.setItem('token', jwt.token);
+        window.localStorage.setItem('user', JSON.stringify(authUser));
+        browserHistory.push('/dashboard');
+        console.log(jwt.token)
+        console.log(jwt.user)
+      });
     })
     .catch((err) => {
-      console.log('ERROR:', err);
+      alert('Not authenticated');
     });
   }
 
@@ -46,32 +59,32 @@ class NewUser extends Component {
       <div>
         <nav>
           <h1>Sign Up</h1>
-          <form onSubmit={this.handleSubmit.bind(this)} className="">
+          <form onSubmit={this.handleSubmit.bind(this)} className=''>
             <div className=''>
               First Name
             </div>
             <div className=''>
-              <input type='text'  name="firstname" placeholder="First Name" onChange={this.handleChange.bind(this)}></input>
+              <input type='text'  name='firstname' placeholder='First Name' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className="">
+            <div className=''>
               Last Name
             </div>
-            <div className="">
-              <input type="text"   name="lastname" placeholder="Last Name" onChange={this.handleChange.bind(this)}></input>
+            <div className=''>
+              <input type='text'   name='lastname' placeholder='Last Name' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className="">
+            <div className=''>
               Email
             </div>
-            <div className="">
-              <input type="text"  name="email" placeholder="Email" onChange={this.handleChange.bind(this)}></input>
+            <div className=''>
+              <input type='text'  name='email' placeholder='Email' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className="">
+            <div className=''>
               Password
             </div>
-            <div className="">
-              <input type="password" onChange={this.handleChange.bind(this)} name="password_digest" placeholder="Password"></input>
+            <div className=''>
+              <input type='password' onChange={this.handleChange.bind(this)} name='password_digest' placeholder='Password'></input>
             </div>
-            <button href="/dashboard" type="submit">Submit</button>
+            <button href='/dashboard' type='submit'>Submit</button>
           </form>
         </nav>
       </div>
