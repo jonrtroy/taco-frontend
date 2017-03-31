@@ -7,7 +7,7 @@ class Dashboard extends Component {
 
     this.state = {
       position: {
-        coordinate: {
+        coords: {
           latitude: 40.766505,
           longitude: -73.986331
         }
@@ -19,14 +19,14 @@ class Dashboard extends Component {
           longitude: -73.986331
         }
       }
-    }
+    };
   }
 
   componentDidMount() {
   // Get user coordinates & store them in state
   navigator.geolocation.getCurrentPosition((position) => {
     this.setState({ position });
-    fetch(`http://localhost:8000/api/yelp/${this.state.position.coordinate.latitude}/${this.state.position.coordinate.longitude}`, {
+    fetch(`http://localhost:8000/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
       method: 'GET'
     })
     .then((results) => {
@@ -41,19 +41,19 @@ class Dashboard extends Component {
   });
 }
 
-pickTaco() {
-  fetch(`http://localhost:8000/api/yelp/${this.state.position.coordinate.latitude}/${this.state.position.coordinate.longitude}`, {
-    method: 'GET'
-  })
-  .then((results) => {
-    results.json().then((data) => {
-      this.setState({tacos: data[Math.floor(Math.random() * data.length)]});
+  pickTaco() {
+    fetch(`http://localhost:8000/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
+      method: 'GET'
+    })
+    .then((results) => {
+      results.json().then((data) => {
+        this.setState({tacos: data[Math.floor(Math.random() * data.length)]});
+      });
+    })
+    .catch((err) => {
+      console.log('ERROR: ', err);
     });
-  })
-  .catch((err) => {
-    console.log('ERROR: ', err);
-  });
-}
+  }
 
 
 
@@ -64,9 +64,9 @@ pickTaco() {
           <div className='taco-result'>
             <DashboardTaco
                 name={this.state.tacos.name}
-                // status={this.state.tacos.is_closed}
-                address={this.state.tacos.display_address}
-                website={this.state.tacos.url}
+                status={this.state.tacos.is_closed}
+                rating={this.state.tacos.rating}
+                address={this.state.tacos.location.display_address}
                 phone_number={this.state.tacos.display_phone}
                 price={this.state.tacos.price}
             />
