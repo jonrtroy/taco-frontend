@@ -7,12 +7,7 @@ class NewUser extends Component {
     super(props);
 
     this.state = {
-      user: {
-        firstname: '',
-        lastname: '',
-        email: '',
-        password_digest: ''
-      }
+      user: {}
     };
   }
 
@@ -34,26 +29,20 @@ class NewUser extends Component {
 
     fetch(`http://localhost:8000/users/new`, {
       method: 'POST',
-      body: JSON.stringify(this.state.user),
+      body: JSON.stringify(this.state),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then((results) => {
-      results.json().then((jwt) => {
-        let authUser = jwt.user;
-        window.localStorage.setItem('token', jwt.token);
-        window.localStorage.setItem('user', JSON.stringify(authUser));
-        browserHistory.push('/dashboard');
-        console.log(jwt.token)
-        console.log(jwt.user)
-      });
+    .then(() => {
+      this.props.router.push('/login');
     })
     .catch((err) => {
-      alert('Not authenticated');
+      console.log("ERROR:", err);
     });
   }
 
+  
   render(){
     return(
       <div>

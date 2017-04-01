@@ -1,50 +1,50 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
+import update from 'react-addons-update';
 
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
-      password: ''
+      user: {
+        email: '',
+        password: ''
+      }
     };
   }
 
-  componentWillMount() {
-    if (localStorage.getItem('token')) {
-        browserHistory.push('/dashboard');
-    }
-  }
 
   handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    }
+    let newState = update(this.state, {
+      user: {
+        $merge: {
+          [event.target.name]: event.target.value
+        }
+      }
+    });
 
+    this.setState(newState);
+  }
 
   // POST request
   handleSubmit(event) {
     event.preventDefault();
     fetch(`http://localhost:8000/users/login`, {
       method: 'POST',
-      body: JSON.stringify(this.state),
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify(this.state)
     })
     .then((results) => {
       results.json().then((jwt) => {
-        let authUser = jwt.user;
-        window.localStorage.setItem('token', jwt.token);
-        window.localStorage.setItem('user', JSON.stringify(authUser));
-        console.log('Local User:', authUser)
-        browserHistory.push('/dashboard');
+        window.localStorage.setItem('MyToken', jwt.token);
+        this.props.router.push('/dashboard');
       });
     })
     .catch(() => {
-      alert('Not Authenticated!');
+      console.log('User login has failed');
     });
   }
 
