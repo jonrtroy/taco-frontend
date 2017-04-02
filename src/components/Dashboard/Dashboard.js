@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
-import DashboardTaco from './DashboardTaco';
 
+import DashboardTaco from './DashboardTaco';
+import Navigation from '../Navigation/Navigation';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -140,6 +141,9 @@ class Dashboard extends Component {
   render() {
     return(
       <div>
+        <Navigation
+          className=''
+        />
         <div className='container'>
           <div className='taco-result'>
             <DashboardTaco
