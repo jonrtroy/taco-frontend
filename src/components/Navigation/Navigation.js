@@ -21,7 +21,7 @@ class Navigation extends Component {
           <div className=''>
             <Link className='' to='/dashboard'>Home</Link><br />
             <Link className='' to='/user/favorite'>My Favorite Tacos</Link><br />
-            {/* <Link className='' to='/user/new/roommate'>Add New Roommate</Link> */}
+            <Link className='' to='/user/community'>Taco Community</Link>
           </div>
           <button className='logoutButton' onClick={this.logout.bind(this)}>Logout</button>
         </nav>

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 
 import SavedTaco from './SavedTaco';
-
+import Navigation from '../Navigation/Navigation';
 
 class FavoriteTaco extends Component {
   constructor(props) {
@@ -47,6 +47,9 @@ class FavoriteTaco extends Component {
   render() {
     return(
       <div className=''>
+        <Navigation
+          className=''
+        />
         <div className='container'>
           <h2>Your Favorite Tacos</h2>
           {this.state.tacos.map((taco) => {
