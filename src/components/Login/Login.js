@@ -39,7 +39,9 @@ class Login extends Component {
     })
     .then((results) => {
       results.json().then((jwt) => {
-        window.localStorage.setItem('MyToken', jwt.token);
+        window.localStorage.setItem('MyToken', jwt.token.token);
+        window.localStorage.setItem('user_id', parseInt(jwt.token.user_id));
+        window.localStorage.setItem('loggedIn', jwt.token.loggedIn);
         this.props.router.push('/dashboard');
       });
     })

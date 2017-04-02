@@ -58,7 +58,7 @@ class FavoriteTaco extends Component {
                   name={taco.name}
                   rating={taco.rating}
                   address={taco.address}
-                  phone_number={taco.phone}
+                  phone_number={taco.phone_number}
                 />
               </div>
             );

@@ -42,7 +42,7 @@ class NewUser extends Component {
     });
   }
 
-  
+
   render(){
     return(
       <div>
