@@ -20,6 +20,13 @@ class FavoriteTaco extends Component {
 
   }
 
+  componentWillMount() {
+  if (!localStorage.getItem('MyToken')) {
+      browserHistory.push('/login');
+  }
+}
+
+
   componentDidMount() {
     fetch(`http://localhost:8000/users/dashboard`, {
       method: 'GET',

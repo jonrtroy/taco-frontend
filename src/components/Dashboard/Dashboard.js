@@ -35,6 +35,12 @@ class Dashboard extends Component {
     };
   }
 
+  componentWillMount() {
+  if (!localStorage.getItem('MyToken')) {
+      browserHistory.push('/login');
+  }
+}
+
 
   componentDidMount() {
 
