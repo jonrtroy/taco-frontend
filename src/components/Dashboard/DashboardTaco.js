@@ -18,20 +18,20 @@ function DashboardTaco(props) {
   return(
       <div>
         <h2>{props.name}</h2>
-        <div className="bar-info">
-          <ul>
-            <li style={statusStyle} >{restaurantStatus}</li>
-            <li>Rating: {props.rating}</li>
-            <li>Address: {props.address}</li>
-            <li>Phone: {props.phone_number}</li>
-            <li>Price: {props.price}</li>
-            <li><a href={props.website}>
-              <button>
-                See Yelp Page
-              </button>
+        <div className='taco-info'>
+
+          <div style={statusStyle} >{restaurantStatus}</div><br />
+          <div>Rating: {props.rating}/5</div><br />
+          <div>Address: {props.address}</div><br />
+          <div>Phone: {props.phone_number}</div><br />
+          <div>Price: {props.price}</div><br />
+          <div><a href={props.website}>
+            <button className='hvr-sweep-to-right'>
+              See Yelp Page
+            </button>
             </a>
-          </li>
-          </ul>
+          </div><br />
+
         </div>
       </div>
   );

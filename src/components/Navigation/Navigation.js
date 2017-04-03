@@ -16,15 +16,15 @@ class Navigation extends Component {
 
   render() {
     return(
-      <div className=''>
+      <div className='navigation-container'>
         <nav>
           <h1>Tacos 4 You</h1>
-          <div className=''>
-            <Link className='' to='/dashboard'>Home</Link><br />
-            <Link className='' to='/user/favorite'>My Favorite Tacos</Link><br />
-            <Link className='' to='/user/community'>Taco Community</Link>
+          <div className='navigation'>
+            <Link to='/dashboard'>Home</Link><br />
+            <Link to='/user/favorite'>My Favorite Tacos</Link><br />
+            <Link to='/user/community'>Taco Community</Link><br />
           </div>
-          <button className='logoutButton' onClick={this.logout.bind(this)}>Logout</button>
+          <button className='hvr-sweep-to-right' onClick={this.logout.bind(this)}>Logout</button>
         </nav>
       </div>
     )

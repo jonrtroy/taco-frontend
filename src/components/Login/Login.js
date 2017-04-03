@@ -61,7 +61,7 @@ class Login extends Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
               <input id='email' placeholder="Email" name='email' type="email" onChange={this.handleChange.bind(this)}></input><br />
               <input id='password' placeholder="Password" name="password" type="password" onChange={this.handleChange.bind(this)}></input><br />
-              <button type="submit">Log In</button>
+              <button className='hvr-back-pulse' type="submit">Log In</button>
             </form>
           </div>
         </div>

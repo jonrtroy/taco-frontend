@@ -150,7 +150,7 @@ class Dashboard extends Component {
         <Navigation
           className=''
         />
-        <div className='container'>
+        <div className='taco-container'>
           <div className='taco-result'>
             <DashboardTaco
                 name={this.state.tacos.name}
@@ -161,11 +161,13 @@ class Dashboard extends Component {
                 price={this.state.tacos.price}
                 website={this.state.tacos.url}
             />
-            <button className='' onClick={this.handleSubmit.bind(this)}>Add to Favorite Tacos</button>
+            <button className='hvr-sweep-to-right' onClick={this.handleSubmit.bind(this)}>Add to Favorite Tacos</button>
           </div>
           <div className='random-taco'>
-            <h2>More Tacos?</h2>
-            <button className='' onClick={this.pickTaco.bind(this)}>Find some more tacos</button>
+            <div className='more-tacos'>
+              <h2>More Tacos?</h2>
+              <button className='hvr-sweep-to-right' onClick={this.pickTaco.bind(this)}>Find some more tacos</button>
+            </div>
           </div>
         </div>
 

@@ -62,7 +62,7 @@ class NewUser extends Component {
             <div className='sign-up-input'>
               <input type='password' onChange={this.handleChange.bind(this)} name='password_digest' placeholder='Password'></input>
             </div>
-            <button href='/dashboard' type='submit'>Submit</button>
+            <button className='hvr-back-pulse' href='/dashboard' type='submit'>Submit</button>
           </form>
         </nav>
       </div>

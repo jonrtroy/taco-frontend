@@ -41,6 +41,7 @@ body {
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
+  padding: 10px 50px;
 }
 
 .landing-page-signup {
@@ -57,6 +58,7 @@ body {
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
+  padding: 10px 40px;
 }
 
 /*Login Page*/
@@ -86,11 +88,12 @@ body {
   z-index: 3;
   position: fixed;
   width: 100%;
-  bottom: 45%;
+  bottom: 40%;
 }
 #login-page-div input {
   background-color: #252627;
   color: #D3D4D9;
+  width: 60%;
 }
 
 #login-page-div input:-webkit-autofill {
@@ -106,6 +109,8 @@ body {
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
+  margin-top: 50px;
+  padding: 10px 40px;
 }
 
 /*New User, Sign up page*/
@@ -146,4 +151,76 @@ body {
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
+  padding: 10px 40px;
+}
+
+/*Dashboard page*/
+
+.taco-info ul {
+  list-style-type: none;
+  left: 100%;
+}
+
+.taco-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.taco-container button {
+  color: #D3D4D9;
+  background-color: Transparent;
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 2px 6px 8px #888888;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+.taco-result {
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  margin-right: 50px;
+  text-align: center;
+  width: 30%;
+}
+
+.random-taco {
+  text-align: center;
+  width: 30%;
+}
+
+.more-tacos {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+/*Navigation Bar*/
+.navigation-container button {
+  color: #D3D4D9;
+  background-color: Transparent;
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 2px 6px 8px #888888;
+  padding: 5px 5px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #D3D4D9;
+  margin-right: 20px;
+}
+
+.navigation a:hover {
+  background-color: #2098D1;
 }

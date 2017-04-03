@@ -13,10 +13,10 @@ class LandingPage extends Component {
         <div className='landing-page-links'>
           <h1>Tacos 4 You!</h1>
           <div className='landing-page-login'>
-            <Link to='/login'><button>Login</button></Link>
+            <Link to='/login'><button className='hvr-back-pulse'>Login</button></Link>
           </div>
           <div className='landing-page-signup'>
-            <Link to='/user/new'><button>Sign Up</button></Link>
+            <Link to='/user/new'><button className='hvr-back-pulse'>Sign Up</button></Link>
           </div>
         </div>
 
