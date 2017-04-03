@@ -166,7 +166,7 @@ class Dashboard extends Component {
           <div className='random-taco'>
             <div className='more-tacos'>
               <h2>More Tacos?</h2>
-              <button className='hvr-sweep-to-right' onClick={this.pickTaco.bind(this)}>Find some more tacos</button>
+              <button className='hvr-sweep-to-right' onClick={this.pickTaco.bind(this)}>Find Tacos</button>
             </div>
           </div>
         </div>

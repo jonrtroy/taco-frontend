@@ -33,20 +33,18 @@ class SavedTaco extends Component {
           <h3>{this.props.name}</h3>
         </div>
         <div className="saved-taco-info">
-          <ul>
-            <li>Rating: {this.props.rating}</li>
-            <li>Address: {this.props.address}</li>
-            <li>Phone: {this.props.phone_number}</li>
-            <li>Price: {this.props.price}</li>
-            <li><a href={this.props.website}>
-              <button>
-                See Yelp Page
-              </button>
-              </a>
-            </li>
-          </ul>
+          <div>Rating: {this.props.rating}</div><br />
+          <div>Address: {this.props.address}</div><br />
+          <div>Phone: {this.props.phone_number}</div><br />
+          <div>Price: {this.props.price}</div><br />
+          <div><a href={this.props.website}><br />
+            <button className='hvr-sweep-to-right'>
+              See Yelp Page
+            </button>
+            </a>
+          </div><br />
           <Link to="/user/favorite">
-            <button className="outline-btn" onClick={this.handleDelete.bind(this)}>Delete Taco</button>
+            <button className="hvr-sweep-to-right" onClick={this.handleDelete.bind(this)}>Delete Taco</button>
           </Link>
         </div>
       </div>

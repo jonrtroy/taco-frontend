@@ -36,28 +36,32 @@ class CommunityTaco extends Component {
 
   render() {
     return(
-      <div className=''>
+      <div>
         <Navigation
-          className=''
         />
-        <div className=''>
-          {this.state.tacos.map((taco) => {
-            return(
-              <div key={taco.id} className=''>
-                <h4>{taco.name}</h4>
-                <li>Rating: {taco.rating}</li>
-                <li>Address: {taco.address}</li>
-                <li>Phone Number: {taco.phone_number}</li>
-                <li>Price: {taco.price}</li>
-                <li><a href={taco.website}>
-                  <button>
-                    See Yelp Page
-                  </button>
-                  </a><br />
-                </li>
-              </div>
-            );
-          })}
+          <div className='community'>
+            <h1>Taco Community</h1>
+            <div className='taco-community-container'>
+              {this.state.tacos.map((taco) => {
+                return(
+                  <div key={taco.id} className='taco-community'>
+                    <h4>{taco.name}</h4><br />
+                    <div className='taco-community-info'>
+                      <div>Rating: {taco.rating}/5</div><br />
+                      <div>Address: {taco.address}</div><br />
+                      <div>Phone Number: {taco.phone_number}</div><br />
+                      <div>Price: {taco.price}</div><br />
+                      <div><a href={taco.website}>
+                        <button className='hvr-sweep-to-right'>
+                          See Yelp Page
+                        </button>
+                      </a><br />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

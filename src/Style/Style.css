@@ -1,6 +1,6 @@
 body {
-  background-color: #252627;
-  color: #D3D4D9;
+  background-color: #153B50;
+  color: #ECEBE4;
 }
 
 /*Landing Page*/
@@ -8,8 +8,11 @@ body {
 .landing-page-div {
   height: 1024px;
   width: 100%;
-  background-color: #252627;
-  color: #D3D4D9;
+  background: url('https://media.timeout.com/images/102890936/image.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
 }
 
@@ -23,7 +26,7 @@ body {
 }
 
 .landing-page-links h1 {
-  color: #D3D4D9;
+  color: #0D1B1E;
   margin-top: auto;
 }
 
@@ -35,9 +38,9 @@ body {
 }
 
 .landing-page-login button {
-  color: #D3D4D9;
+  color: #0D1B1E;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #0D1B1E;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
@@ -52,9 +55,9 @@ body {
 }
 
 .landing-page-signup button {
-  color: #D3D4D9;
+  color: #0D1B1E;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #0D1B1E;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
@@ -70,16 +73,16 @@ body {
 #email {
   background-color: Transparent;
   border: none;
-  border-bottom: 2px solid #D3D4D9;
+  border-bottom: 2px solid #ECEBE4;
   padding-top: 40px;
   text-align: center;
 }
 
 #password {
-  background-color: #252627;
-  color: #D3D4D9;
+  background-color: #153B50;
+  color: #ECEBE4;
   border: none;
-  border-bottom: 2px solid #D3D4D9;
+  border-bottom: 2px solid #ECEBE4;
   padding-top: 40px;
   text-align: center;
 }
@@ -91,21 +94,21 @@ body {
   bottom: 40%;
 }
 #login-page-div input {
-  background-color: #252627;
-  color: #D3D4D9;
+  background-color: #153B50;
+  color: #ECEBE4;
   width: 60%;
 }
 
 #login-page-div input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #252627;
-  -webkit-text-fill-color: #D3D4D9 !important;
+  -webkit-box-shadow: inset 0 0 0px 9999px #153B50;
+  -webkit-text-fill-color: #ECEBE4 !important;
 }
 
 #login-page-div button {
-  color: #D3D4D9;
+  color: #ECEBE4;
   margin-top: 20px;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #ECEBE4;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
@@ -125,29 +128,29 @@ body {
 
 .sign-up input {
   border: none;
-  background-color: #252627;
-  color: #D3D4D9;
+  background-color: #153B50;
+  color: #ECEBE4;
   text-align: center;
 }
 
 .sign-up input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #252627;
-  -webkit-text-fill-color: #D3D4D9 !important;
+  -webkit-box-shadow: inset 0 0 0px 9999px #153B50;
+  -webkit-text-fill-color: #ECEBE4 !important;
 }
 
 .sign-up-input {
-  background-color: #252627;
-  color: #D3D4D9;
-  border-bottom: 2px solid #D3D4D9;
+  background-color: #153B50;
+  color: #ECEBE4;
+  border-bottom: 2px solid #ECEBE4;
   padding-top: 60px;
   text-align: center;
 }
 
 .sign-up button {
   margin-top: 30px;
-  color: #D3D4D9;
+  color: #ECEBE4;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #ECEBE4;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
@@ -156,22 +159,19 @@ body {
 
 /*Dashboard page*/
 
-.taco-info ul {
-  list-style-type: none;
-  left: 100%;
-}
-
 .taco-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .taco-container button {
-  color: #D3D4D9;
+  color: #ECEBE4;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #ECEBE4;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
@@ -180,11 +180,16 @@ body {
 }
 
 .taco-result {
-  border: 2px solid #D3D4D9;
+  border: 2px solid #ECEBE4;
   border-radius: 10px;
   margin-right: 50px;
+  width: 40%;
   text-align: center;
-  width: 30%;
+}
+
+.taco-info {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .random-taco {
@@ -193,34 +198,121 @@ body {
 }
 
 .more-tacos {
-  margin-top: 25%;
+  margin-top: 30%;
   margin-bottom: 25%;
 }
 
 /*Navigation Bar*/
+.navigation-container {
+  background-color: #0D1B1E;
+}
+
+.navigation-container h1 {
+  margin-top: 0px;
+  margin-left: 2%;
+}
+
 .navigation-container button {
-  color: #D3D4D9;
+  color: #ECEBE4;
   background-color: Transparent;
-  border: 2px solid #D3D4D9;
+  border: 2px solid #ECEBE4;
   border-radius: 10px;
   outline: none;
   box-shadow: 2px 6px 8px #888888;
   padding: 5px 5px;
+  margin-left: 2%;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
+  margin-left: 2%;
   padding-bottom: 20px;
 
 }
 
 .navigation a {
   text-decoration: none;
-  color: #D3D4D9;
+  color: #ECEBE4;
   margin-right: 20px;
 }
 
 .navigation a:hover {
   background-color: #2098D1;
+}
+
+/*Favorite Tacos Page*/
+.favorite-container {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.favorite-tacos-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.saved-taco-container {
+  border: 2px solid #ECEBE4;
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.saved-taco-container button {
+  color: #ECEBE4;
+  background-color: Transparent;
+  border: 2px solid #ECEBE4;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 2px 6px 8px #888888;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+.saved-taco-info {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*Taco Community Page*/
+
+.community {
+  text-align: center;
+}
+
+.taco-community-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.taco-community {
+  border: 2px solid #ECEBE4;
+  border-radius: 10px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.taco-community button {
+  color: #ECEBE4;
+  background-color: Transparent;
+  border: 2px solid #ECEBE4;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 2px 6px 8px #888888;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+.taco-community-info {
+  margin-left: 10%;
+  margin-right: 10%;
 }

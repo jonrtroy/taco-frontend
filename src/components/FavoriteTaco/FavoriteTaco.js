@@ -53,28 +53,30 @@ class FavoriteTaco extends Component {
 
   render() {
     return(
-      <div className=''>
+      <div>
         <Navigation
           className=''
         />
-        <div className='container'>
+        <div className='favorite-container'>
           <h2>Your Favorite Tacos</h2>
-          {this.state.tacos.map((taco) => {
-            return(
-              <div key={taco.id}>
-                <SavedTaco
-                  taco_id={taco.id}
-                  user_id={this.state.user_id}
-                  name={taco.name}
-                  rating={taco.rating}
-                  address={taco.address}
-                  phone_number={taco.phone_number}
-                  price={taco.price}
-                  website={taco.website}
-                />
-              </div>
-            );
-          })}
+          <div className='favorite-tacos-container'>
+            {this.state.tacos.map((taco) => {
+              return(
+                <div key={taco.id}>
+                  <SavedTaco
+                    taco_id={taco.id}
+                    user_id={this.state.user_id}
+                    name={taco.name}
+                    rating={taco.rating}
+                    address={taco.address}
+                    phone_number={taco.phone_number}
+                    price={taco.price}
+                    website={taco.website}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
