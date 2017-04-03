@@ -36,14 +36,17 @@ class CommunityTaco extends Component {
           {this.state.tacos.map((taco) => {
             return(
               <div key={taco.id} className=''>
-                <div><strong>Name</strong></div>
-                <div>{taco.name}</div>
-                <div><strong>Rating</strong></div>
-                <div>{taco.rating}</div>
-                <div><strong>Address</strong></div>
-                <div>{taco.address}</div>
-                <div><strong>Phone Number</strong></div>
-                <div>{taco.phone_number}</div>
+                <h4>{taco.name}</h4>
+                <li>Rating: {taco.rating}</li>
+                <li>Address: {taco.address}</li>
+                <li>Phone Number: {taco.phone_number}</li>
+                <li>Price: {taco.price}</li>
+                <li><a href={taco.website}>
+                  <button>
+                    See Yelp Page
+                  </button>
+                  </a><br />
+                </li>
               </div>
             );
           })}

@@ -37,6 +37,13 @@ class SavedTaco extends Component {
             <li>Rating: {this.props.rating}</li>
             <li>Address: {this.props.address}</li>
             <li>Phone: {this.props.phone_number}</li>
+            <li>Price: {this.props.price}</li>
+            <li><a href={this.props.website}>
+              <button>
+                See Yelp Page
+              </button>
+              </a>
+            </li>
           </ul>
           <Link to="/user/favorite">
             <button className="outline-btn" onClick={this.handleDelete.bind(this)}>Delete Taco</button>

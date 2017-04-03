@@ -153,6 +153,7 @@ class Dashboard extends Component {
                 address={this.state.tacos.location.display_address}
                 phone_number={this.state.tacos.display_phone}
                 price={this.state.tacos.price}
+                website={this.state.tacos.url}
             />
             <button className='' onClick={this.handleSubmit.bind(this)}>Add to Favorite Tacos</button>
           </div>

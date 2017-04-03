@@ -25,6 +25,12 @@ function DashboardTaco(props) {
             <li>Address: {props.address}</li>
             <li>Phone: {props.phone_number}</li>
             <li>Price: {props.price}</li>
+            <li><a href={props.website}>
+              <button>
+                See Yelp Page
+              </button>
+            </a>
+          </li>
           </ul>
         </div>
       </div>

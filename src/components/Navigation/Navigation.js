@@ -18,6 +18,7 @@ class Navigation extends Component {
     return(
       <div className=''>
         <nav>
+          <h1>Taco 4 You</h1>
           <div className=''>
             <Link className='' to='/dashboard'>Home</Link><br />
             <Link className='' to='/user/favorite'>My Favorite Tacos</Link><br />
