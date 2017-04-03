@@ -11,7 +11,7 @@ class LandingPage extends Component {
     return(
       <div className='landing-page-div'>
         <div className='landing-page-links'>
-          <h1>Pick a Taco 4 You!</h1>
+          <h1>Tacos 4 You!</h1>
           <div className='landing-page-login'>
             <Link to='/login'><button>Login</button></Link>
           </div>

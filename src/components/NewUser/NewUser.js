@@ -45,32 +45,21 @@ class NewUser extends Component {
 
   render(){
     return(
-      <div>
+      <div className='container'>
         <nav>
-          <h1>Sign Up</h1>
-          <form onSubmit={this.handleSubmit.bind(this)} className=''>
-            <div className=''>
-              First Name
-            </div>
-            <div className=''>
+          <h1>Tacos 4 You</h1>
+          <h3>Sign Up</h3>
+          <form onSubmit={this.handleSubmit.bind(this)} className='sign-up'>
+            <div className='sign-up-input'>
               <input type='text'  name='firstname' placeholder='First Name' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className=''>
-              Last Name
-            </div>
-            <div className=''>
+            <div className='sign-up-input'>
               <input type='text'   name='lastname' placeholder='Last Name' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className=''>
-              Email
-            </div>
-            <div className=''>
+            <div className='sign-up-input'>
               <input type='text'  name='email' placeholder='Email' onChange={this.handleChange.bind(this)}></input>
             </div>
-            <div className=''>
-              Password
-            </div>
-            <div className=''>
+            <div className='sign-up-input'>
               <input type='password' onChange={this.handleChange.bind(this)} name='password_digest' placeholder='Password'></input>
             </div>
             <button href='/dashboard' type='submit'>Submit</button>

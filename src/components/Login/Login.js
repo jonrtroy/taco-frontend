@@ -54,7 +54,7 @@ class Login extends Component {
     return (
      <div>
         <div className='container'>
-          <h1>Taco 4 You</h1>
+          <h1>Tacos 4 You</h1>
 
           <h3>Login</h3>
           <div id="login-page-div">
