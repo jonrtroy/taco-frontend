@@ -1,0 +1,106 @@
+body {
+  background-color: #252627;
+  color: #D3D4D9;
+}
+
+/*Landing Page*/
+
+.landing-page-div {
+  height: 1024px;
+  width: 100%;
+  background-color: #252627;
+  color: #D3D4D9;
+  text-align: center;
+}
+
+
+.landing-page-links {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+.landing-page-links h1 {
+  color: #D3D4D9;
+  margin-top: auto;
+}
+
+.landing-page-login {
+  z-index: 4;
+  position: fixed;
+  width: 100%;
+  bottom: 55%;
+}
+
+.landing-page-login button {
+  color: #D3D4D9;
+  background-color: Transparent;
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  outline: none;
+}
+
+.landing-page-signup {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  bottom: 45%;
+}
+
+.landing-page-signup button {
+  color: #D3D4D9;
+  background-color: Transparent;
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  outline: none;
+}
+
+/*Login Page*/
+
+.container {
+  text-align: center;
+}
+
+#email {
+  background-color: Transparent;
+  border: none;
+  border-bottom: 2px solid #D3D4D9;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#password {
+  background-color: #252627;
+  color: #D3D4D9;
+  border: none;
+  border-bottom: 2px solid #D3D4D9;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#login-page-div {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  bottom: 50%;
+}
+#login-page-div input {
+  background-color: #252627;
+  color: #D3D4D9;
+}
+
+#login-page-div input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px #252627;
+  -webkit-text-fill-color: #D3D4D9 !important;
+}
+
+#login-page-div button {
+  color: #D3D4D9;
+  margin-top: 20px;
+  background-color: Transparent;
+  border: 2px solid #D3D4D9;
+  border-radius: 10px;
+  outline: none;
+}

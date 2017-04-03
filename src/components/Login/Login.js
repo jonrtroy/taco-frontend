@@ -59,8 +59,8 @@ class Login extends Component {
           <h3>Login</h3>
           <div id="login-page-div">
             <form onSubmit={this.handleSubmit.bind(this)}>
-              <input placeholder="Email" name='email' type="email" onChange={this.handleChange.bind(this)}></input>
-              <input placeholder="Password" name="password" type="password" onChange={this.handleChange.bind(this)}></input>
+              <input id='email' placeholder="Email" name='email' type="email" onChange={this.handleChange.bind(this)}></input><br />
+              <input id='password' placeholder="Password" name="password" type="password" onChange={this.handleChange.bind(this)}></input><br />
               <button type="submit">Log In</button>
             </form>
           </div>

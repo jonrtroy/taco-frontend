@@ -60,7 +60,7 @@ class Dashboard extends Component {
           if(data[i].rating >= 4) {
             // push the data into the empty array
             ratingFour.push(data[i]);
-            console.log('RAITINGFOUR', ratingFour);
+            console.log('RATINGFOUR', ratingFour);
           }
         }
         console.log('RATING', ratingFour);
