@@ -27,7 +27,7 @@ class FavoriteTaco extends Component {
 
 
   componentDidMount() {
-    fetch(`https://taco-4-you.herokuapp.com/users/dashboard`, {
+    fetch(`https://taco4you.herokuapp.com/users/dashboard`, {
       method: 'GET',
       headers: {
         'Authorization': window.localStorage.getItem('MyToken')

@@ -20,7 +20,7 @@ class CommunityTaco extends Component {
 
 
   componentDidMount() {
-    fetch(`https://taco-4-you.herokuapp.com/tacos`, {
+    fetch(`https://taco4you.herokuapp.com/tacos`, {
       method: 'GET'
     })
     .then((results) => {

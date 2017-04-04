@@ -25,7 +25,7 @@ class NewUser extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    fetch(`https://taco-4-you.herokuapp.com/users/new`, {
+    fetch(`https://taco4you.herokuapp.com/users/new`, {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {

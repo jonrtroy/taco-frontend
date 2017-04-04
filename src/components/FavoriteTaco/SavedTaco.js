@@ -14,7 +14,7 @@ class SavedTaco extends Component {
   }
 
   handleDelete() {
-    fetch(`https://taco-4-you.herokuapp.com/tacos/${this.props.taco_id}/${this.props.user_id}`, {
+    fetch(`https://taco4you.herokuapp.com/tacos/${this.props.taco_id}/${this.props.user_id}`, {
       method: 'DELETE'
     })
     .then(() => {

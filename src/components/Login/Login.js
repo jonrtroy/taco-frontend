@@ -30,7 +30,7 @@ class Login extends Component {
   // POST request
   handleSubmit(event) {
     event.preventDefault();
-    fetch(`https://taco-4-you.herokuapp.com/users/login`, {
+    fetch(`https://taco4you.herokuapp.com/users/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

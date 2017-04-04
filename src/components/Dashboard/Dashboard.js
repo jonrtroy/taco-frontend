@@ -51,7 +51,7 @@ class Dashboard extends Component {
 
   navigator.geolocation.getCurrentPosition((position) => {
     this.setState({ position });
-    fetch(`https://taco-4-you.herokuapp.com/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
+    fetch(`https://taco4you.herokuapp.com/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
       method: 'GET'
     })
     .then((results) => {
@@ -89,7 +89,7 @@ class Dashboard extends Component {
       isVisible:{ opacity: '0' }
     });
 
-    fetch(`https://taco-4-you.herokuapp.com/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
+    fetch(`https://taco4you.herokuapp.com/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
       method: 'GET'
     })
     .then((results) => {
@@ -124,7 +124,7 @@ class Dashboard extends Component {
     // If user is logged in 'Add to Favorites' re-directs to favorite
     // Else re-direct to login page
       if(window.localStorage.getItem('loggedIn')) {
-        fetch('https://taco-4-you.herokuapp.com/tacos', {
+        fetch('https://taco4you.herokuapp.com/tacos', {
           method: 'POST',
           body: JSON.stringify({
             taco: {
