@@ -38,7 +38,7 @@ class NewUser extends Component {
       this.props.router.push('/login');
     })
     .catch((err) => {
-      console.log("ERROR:", err);
+      console.log('ERROR:', err);
     });
   }
 
@@ -48,21 +48,25 @@ class NewUser extends Component {
       <div className='container'>
         <nav>
           <h1>Tacos 4 You</h1>
-          <h3>Sign Up</h3>
+          <h2>Sign Up</h2>
           <form onSubmit={this.handleSubmit.bind(this)} className='sign-up'>
+            <h4>First Name</h4>
             <div className='sign-up-input'>
-              <input type='text'  name='firstname' placeholder='First Name' onChange={this.handleChange.bind(this)}></input>
+              <input type='text'  name='firstname' onChange={this.handleChange.bind(this)}></input>
             </div>
+            <h4>Last Name</h4>
             <div className='sign-up-input'>
-              <input type='text'   name='lastname' placeholder='Last Name' onChange={this.handleChange.bind(this)}></input>
+              <input type='text'   name='lastname' onChange={this.handleChange.bind(this)}></input>
             </div>
+            <h4>Email</h4>
             <div className='sign-up-input'>
-              <input type='text'  name='email' placeholder='Email' onChange={this.handleChange.bind(this)}></input>
+              <input type='text'  name='email' onChange={this.handleChange.bind(this)}></input>
             </div>
+            <h4>Password</h4>
             <div className='sign-up-input'>
-              <input type='password' onChange={this.handleChange.bind(this)} name='password_digest' placeholder='Password'></input>
+              <input type='password' onChange={this.handleChange.bind(this)} name='password_digest'></input>
             </div>
-            <button className='hvr-back-pulse' href='/dashboard' type='submit'>Submit</button>
+            <button className='hvr-radial-out' href='/dashboard' type='submit'>Submit</button>
           </form>
         </nav>
       </div>

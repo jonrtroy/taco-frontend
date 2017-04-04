@@ -58,7 +58,7 @@ class FavoriteTaco extends Component {
           className=''
         />
         <div className='favorite-container'>
-          <h2>Your Favorite Tacos</h2>
+          <h1>Your Favorite Tacos</h1>
           <div className='favorite-tacos-container'>
             {this.state.tacos.map((taco) => {
               return(

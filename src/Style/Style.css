@@ -1,6 +1,6 @@
 body {
-  background-color: #153B50;
-  color: #ECEBE4;
+  background-color: #08B2E3;
+    color: #ECEBE4;
 }
 
 /*Landing Page*/
@@ -71,19 +71,20 @@ body {
 }
 
 #email {
+  color: #ECEBE4;
   background-color: Transparent;
   border: none;
   border-bottom: 2px solid #ECEBE4;
-  padding-top: 40px;
+  padding-top: 10px;
   text-align: center;
 }
 
 #password {
-  background-color: #153B50;
+  background-color: #08B2E3;
   color: #ECEBE4;
   border: none;
   border-bottom: 2px solid #ECEBE4;
-  padding-top: 40px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -91,16 +92,16 @@ body {
   z-index: 3;
   position: fixed;
   width: 100%;
-  bottom: 40%;
+  bottom: 30%;
 }
 #login-page-div input {
-  background-color: #153B50;
+  background-color: #08B2E3;
   color: #ECEBE4;
   width: 60%;
 }
 
 #login-page-div input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #153B50;
+  -webkit-box-shadow: inset 0 0 0px 9999px #08B2E3;
   -webkit-text-fill-color: #ECEBE4 !important;
 }
 
@@ -120,7 +121,7 @@ body {
 
 .sign-up {
   z-index: 3;
-  bottom: 50%;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -128,21 +129,21 @@ body {
 
 .sign-up input {
   border: none;
-  background-color: #153B50;
+  background-color: #08B2E3;
   color: #ECEBE4;
   text-align: center;
+  width: 100%;
 }
 
 .sign-up input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0px 9999px #153B50;
+  -webkit-box-shadow: inset 0 0 0px 9999px #08B2E3;
   -webkit-text-fill-color: #ECEBE4 !important;
 }
 
 .sign-up-input {
-  background-color: #153B50;
+  background-color: #08B2E3;
   color: #ECEBE4;
   border-bottom: 2px solid #ECEBE4;
-  padding-top: 60px;
   text-align: center;
 }
 

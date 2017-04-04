@@ -56,12 +56,14 @@ class Login extends Component {
         <div>
           <h1>Tacos 4 You</h1>
 
-          <h3>Login</h3>
-          <div id="login-page-div">
+          <h2>Login</h2>
+          <div id='login-page-div'>
             <form onSubmit={this.handleSubmit.bind(this)}>
-              <input id='email' placeholder="Email" name='email' type="email" onChange={this.handleChange.bind(this)}></input><br />
-              <input id='password' placeholder="Password" name="password" type="password" onChange={this.handleChange.bind(this)}></input><br />
-              <button className='hvr-back-pulse' type="submit">Log In</button>
+              <h4>Email</h4>
+              <input id='email' name='email' type='email' onChange={this.handleChange.bind(this)}></input><br />
+              <h4>Password</h4>
+              <input id='password' name='password' type='password' onChange={this.handleChange.bind(this)}></input><br />
+              <button className='hvr-radial-out' type='submit'>Log In</button>
             </form>
           </div>
         </div>

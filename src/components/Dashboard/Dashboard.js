@@ -109,7 +109,7 @@ class Dashboard extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // If user is logged in "Add to Favorites" re-directs to favorite
+    // If user is logged in 'Add to Favorites' re-directs to favorite
     // Else re-direct to login page
       if(window.localStorage.getItem('loggedIn')) {
         fetch('http://localhost:8000/tacos', {

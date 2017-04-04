@@ -25,7 +25,7 @@ class Navigation extends Component {
               <Link to='/user/favorite'>My Favorite Tacos</Link><br />
               <Link to='/user/community'>Taco Community</Link><br />
             </div>
-            <button className='hvr-sweep-to-right' onClick={this.logout.bind(this)}>Logout</button>
+            <button className='hvr-back-pulse' onClick={this.logout.bind(this)}>Logout</button>
             <hr />
           </div>
         </nav>
