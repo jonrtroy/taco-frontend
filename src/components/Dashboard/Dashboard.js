@@ -21,8 +21,7 @@ class Dashboard extends Component {
         rating: '...',
         location: {
           display_address: [
-          '...',
-          ''
+          '...', '...'
         ]
       },
         display_phone: '...',
@@ -31,6 +30,12 @@ class Dashboard extends Component {
           latitude: 40.766505,
           longitude: -73.986331
         }
+      },
+      loader: {
+        display: 'block'
+      },
+      isVisible: {
+        opacity: '0'
       }
     };
   }
@@ -64,9 +69,11 @@ class Dashboard extends Component {
           }
         }
         console.log('RATING', ratingFour);
-        return this.setState({
+        this.setState({
           // randomly selecting from the array to get a taco restaurant
-          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))]
+          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))],
+          loader: { display: 'none' },
+          isVisible: { opacity: '1' }
         });
       });
     })
@@ -77,6 +84,11 @@ class Dashboard extends Component {
 }
 
   pickTaco() {
+    this.setState({
+      loader: { display: 'block'},
+      isVisible:{ opacity: '0' }
+    });
+
     fetch(`http://localhost:8000/api/yelp/${this.state.position.coords.latitude}/${this.state.position.coords.longitude}`, {
       method: 'GET'
     })
@@ -98,7 +110,9 @@ class Dashboard extends Component {
         }
         return this.setState({
           // randomly selecting from the array to get a taco restaurant
-          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))]
+          tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))],
+          loader: { display: 'none' },
+          isVisible: { opacity: '1' }
         });
       });
     })
@@ -151,7 +165,8 @@ class Dashboard extends Component {
           className=''
         />
         <div className='taco-container'>
-          <div className='taco-result'>
+          <div className='loader' style={this.state.loader}></div>
+          <div className='taco-result' style={this.state.isVisible}>
             <DashboardTaco
                 name={this.state.tacos.name}
                 status={this.state.tacos.is_closed}
@@ -166,7 +181,7 @@ class Dashboard extends Component {
           <div className='random-taco'>
             <div className='more-tacos'>
               <h2>More Tacos?</h2>
-              <button className='hvr-sweep-to-right' onClick={this.pickTaco.bind(this)}>Find Tacos</button>
+              <button onClick={this.pickTaco.bind(this)}>Find Tacos</button>
             </div>
           </div>
         </div>

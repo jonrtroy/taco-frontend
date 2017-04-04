@@ -4,11 +4,11 @@ function DashboardTaco(props) {
   // Functionality to toggle colors between Open & Closed states
   let restaurantStatus;
   let statusStyle = {
-    color: '#FF3B44',
+    color: '#D7263D',
   };
   if(props.status === false) {
     restaurantStatus = 'Open Right Now';
-    statusStyle.color = '#41FFC0';
+    statusStyle.color = '#042A2B';
   } else {
     restaurantStatus = 'This Place is Closed';
   }
@@ -25,8 +25,8 @@ function DashboardTaco(props) {
           <div>Address: {props.address}</div><br />
           <div>Phone: {props.phone_number}</div><br />
           <div>Price: {props.price}</div><br />
-          <div><a href={props.website}>
-            <button className='hvr-sweep-to-right'>
+          <div><a target='_blank' href={props.website}>
+            <button>
               See Yelp Page
             </button>
             </a>

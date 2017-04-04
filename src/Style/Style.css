@@ -1,6 +1,30 @@
 body {
   background-color: #08B2E3;
-    color: #ECEBE4;
+  color: #ECEBE4;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 100%;
+  border-top: 16px solid #3498db;
+  width: 75px;
+  height: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 45%;
+  left: 30%;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*Landing Page*/
@@ -64,6 +88,15 @@ body {
   padding: 10px 40px;
 }
 
+.back-button {
+  color: #ECEBE4;
+  background-color: Transparent;
+  border: 2px solid #ECEBE4;
+  border-radius: 10px;
+  box-shadow: 2px 6px 8px #888888;
+}
+
+
 /*Login Page*/
 
 .container {
@@ -97,7 +130,7 @@ body {
 #login-page-div input {
   background-color: #08B2E3;
   color: #ECEBE4;
-  width: 60%;
+  width: 50%;
 }
 
 #login-page-div input:-webkit-autofill {
@@ -121,7 +154,7 @@ body {
 
 .sign-up {
   z-index: 3;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -193,6 +226,10 @@ body {
   margin-right: 10%;
 }
 
+.taco-info button:hover {
+  background-color: #0D1B1E;
+}
+
 .random-taco {
   text-align: center;
   width: 30%;
@@ -201,6 +238,10 @@ body {
 .more-tacos {
   margin-top: 30%;
   margin-bottom: 25%;
+}
+
+.more-tacos button:hover {
+  background-color: #0D1B1E;
 }
 
 /*Navigation Bar*/
@@ -262,6 +303,8 @@ body {
   margin-right: 50px;
   margin-bottom: 30px;
   text-align: center;
+  height: 400px;
+  width: 400px;
 }
 
 .saved-taco-container button {
@@ -278,6 +321,10 @@ body {
 .saved-taco-info {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.saved-taco-info button:hover {
+  background-color: #0D1B1E;
 }
 
 /*Taco Community Page*/
@@ -300,6 +347,8 @@ body {
   margin-right: 5%;
   margin-bottom: 5%;
   text-align: center;
+  height: 350px;
+  width: 350px;
 }
 
 .taco-community button {
@@ -316,4 +365,15 @@ body {
 .taco-community-info {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.taco-community-info button:hover {
+  background-color: #0D1B1E;
+}
+
+@media (max-width:600px) {
+  .loader {
+    top: 35%;
+    left: 20%;
+  }
 }

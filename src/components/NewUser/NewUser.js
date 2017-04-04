@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import update from 'react-addons-update';
+import { Link } from 'react-router';
 
 class NewUser extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ class NewUser extends Component {
         <nav>
           <h1>Tacos 4 You</h1>
           <h2>Sign Up</h2>
+          <Link to='/'><button className='back-button hvr-radial-out'>Back</button></Link><br />
           <form onSubmit={this.handleSubmit.bind(this)} className='sign-up'>
             <h4>First Name</h4>
             <div className='sign-up-input'>

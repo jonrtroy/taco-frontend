@@ -28,23 +28,22 @@ class SavedTaco extends Component {
 
   render() {
     return(
-      <div className="saved-taco-container" style={this.state.isVisible}>
-        <div>
+      <div className='saved-taco-container' style={this.state.isVisible}>
+
+        <div className='saved-taco-info'>
           <h3>{this.props.name}</h3>
-        </div>
-        <div className="saved-taco-info">
           <div>Rating: {this.props.rating}</div><br />
           <div>Address: {this.props.address}</div><br />
           <div>Phone: {this.props.phone_number}</div><br />
           <div>Price: {this.props.price}</div><br />
-          <div><a href={this.props.website}><br />
-            <button className='hvr-sweep-to-right'>
+          <div><a target='_blank' href={this.props.website}><br />
+            <button>
               See Yelp Page
             </button>
             </a>
           </div><br />
-          <Link to="/user/favorite">
-            <button className="hvr-sweep-to-right" onClick={this.handleDelete.bind(this)}>Delete Taco</button>
+          <Link to='/user/favorite'>
+            <button onClick={this.handleDelete.bind(this)}>Delete Taco</button>
           </Link>
         </div>
       </div>

@@ -41,6 +41,7 @@ class CommunityTaco extends Component {
         />
           <div className='community'>
             <h1>Taco Community</h1>
+            <h3>See the Taco Community's Favorite Tacos</h3>
             <div className='taco-community-container'>
               {this.state.tacos.map((taco) => {
                 return(
@@ -51,8 +52,8 @@ class CommunityTaco extends Component {
                       <div>Address: {taco.address}</div><br />
                       <div>Phone Number: {taco.phone_number}</div><br />
                       <div>Price: {taco.price}</div><br />
-                      <div><a href={taco.website}>
-                        <button className='hvr-sweep-to-right'>
+                      <div><a target='_blank' href={taco.website}>
+                        <button>
                           See Yelp Page
                         </button>
                       </a><br />
