@@ -48,6 +48,7 @@ class Login extends Component {
     })
     .catch(() => {
       console.log('User login has failed');
+      alert('Email or Password was incorrect');
     });
   }
 

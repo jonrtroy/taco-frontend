@@ -176,7 +176,7 @@ class Dashboard extends Component {
                 price={this.state.tacos.price}
                 website={this.state.tacos.url}
             />
-            <button className='hvr-sweep-to-right' onClick={this.handleSubmit.bind(this)}>Add to Favorite Tacos</button>
+            <button className='hvr-radial-out' onClick={this.handleSubmit.bind(this)}>Add to Favorite Tacos</button>
           </div>
           <div className='random-taco'>
             <div className='more-tacos'>

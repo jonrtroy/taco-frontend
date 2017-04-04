@@ -40,6 +40,7 @@ class NewUser extends Component {
     })
     .catch((err) => {
       console.log('ERROR:', err);
+      alert('Please fill out all fields correctly');
     });
   }
 
