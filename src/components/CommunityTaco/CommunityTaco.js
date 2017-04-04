@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 
 import Navigation from '../Navigation/Navigation';
@@ -21,7 +20,7 @@ class CommunityTaco extends Component {
 
 
   componentDidMount() {
-    fetch(`http://localhost:8000/tacos`, {
+    fetch(`https://taco-4-you.herokuapp.com/tacos`, {
       method: 'GET'
     })
     .then((results) => {

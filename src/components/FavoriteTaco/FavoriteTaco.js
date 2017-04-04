@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 
 import SavedTaco from './SavedTaco';
@@ -28,7 +27,7 @@ class FavoriteTaco extends Component {
 
 
   componentDidMount() {
-    fetch(`http://localhost:8000/users/dashboard`, {
+    fetch(`https://taco-4-you.herokuapp.com/users/dashboard`, {
       method: 'GET',
       headers: {
         'Authorization': window.localStorage.getItem('MyToken')
@@ -44,7 +43,7 @@ class FavoriteTaco extends Component {
         window.localStorage.setItem('loggedIn', true);
       });
     })
-    .catch((err) => {
+    .catch(() => {
       browserHistory.push('/login');
     })
   }

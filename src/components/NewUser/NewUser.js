@@ -25,7 +25,7 @@ class NewUser extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    fetch(`http://localhost:8000/users/new`, {
+    fetch(`https://taco-4-you.herokuapp.com/users/new`, {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {
@@ -35,7 +35,7 @@ class NewUser extends Component {
     .then(() => {
       this.props.router.push('/login');
     })
-    .catch((err) => {
+    .catch(() => {
       alert('Please fill out all fields correctly');
     });
   }

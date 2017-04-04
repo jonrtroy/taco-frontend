@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
 import update from 'react-addons-update';
 import { Link } from 'react-router';
 
@@ -31,7 +30,7 @@ class Login extends Component {
   // POST request
   handleSubmit(event) {
     event.preventDefault();
-    fetch(`http://localhost:8000/users/login`, {
+    fetch(`https://taco-4-you.herokuapp.com/users/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
