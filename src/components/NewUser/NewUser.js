@@ -25,8 +25,6 @@ class NewUser extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(this.state.user);
-
     fetch(`http://localhost:8000/users/new`, {
       method: 'POST',
       body: JSON.stringify(this.state),
@@ -38,7 +36,6 @@ class NewUser extends Component {
       this.props.router.push('/login');
     })
     .catch((err) => {
-      console.log('ERROR:', err);
       alert('Please fill out all fields correctly');
     });
   }

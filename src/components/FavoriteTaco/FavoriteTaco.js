@@ -35,9 +35,7 @@ class FavoriteTaco extends Component {
       }
     })
     .then((results) => {
-      console.log(results)
       results.json().then((data) => {
-        console.log(data)
         // Get user data and user id
         this.setState({ tacos: data.data });
         this.setState({ user_id: data.user_id});

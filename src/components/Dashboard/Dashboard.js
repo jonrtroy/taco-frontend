@@ -102,10 +102,8 @@ class Dashboard extends Component {
           // console.log('data', data[i].rating);
           // if statement to find the tacos whose ratings are equal to or greater than 4
           if(data[i].rating >= 4) {
-            console.log('restaurant', data)
             // push the data into the empty array
             ratingFour.push(data[i]);
-            console.log('RATING', ratingFour);
           }
         }
         return this.setState({
