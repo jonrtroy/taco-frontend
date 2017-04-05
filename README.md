@@ -9,41 +9,21 @@ Descriptions of any unsolved problems or major hurdles you had to overcome
 
 ## Project 4 - Tacos 4 You
 
-I created a taco finder that will find a taco restaurant that is within 1.25 miles of where you are located that is rated a 4 or higher on Yelp. You will be able to sign in and favorite a taco as well as see what others are favoriting.
-
-
-## Photos of my App
-
-![Alt Text](../landingpage.png)
-
-## ERD
-
-![Alt Text](https://github.com/jonrtroy/forum-app/blob/master/forum_ERD.png)
+This is my fourth project for General Assembly's Web Development Immersive program. I created a taco finder that will find a taco restaurant that is within 1.25 miles of where you are located that is rated a 4 or higher on Yelp. You will be able to sign in and favorite a taco as well as see what others are favoriting. I used a navigator geolocation feature to get the user's location. I used the Yelp API to find data from restaurants that the user can eventually go to if they are interested.
 
 
 ## User Stories
-1. A user should be able to create their own topic for discussion.
-2. A user should be able to like a topic.
-3. A user should be able to click on a topic.
-4. A user should be able to commment on a topic.
-5. A user should be able to like a comment.
-6. A user should go back to the home page from either the new page or show page.
-7. A user should be able to see how many likes a topic has.
-8. A user should be able to see how many comments a topic has.
+1. A user should be able to sign up.
+2. A user should be able to log in with their email and password.
+3. A user should be able to see taco restaurants within 1.25 miles of their location.
+4. A user should be able to click more tacos if they do not like the one they receive first.
+5. A user should be able to favorite a taco restaurant.
+6. A user should go back to go to the Yelp page of the taco restaurant that comes up.
+7. A user should be able to delete a favorite restaurant.
+8. A user should be able to see what other taco restaurants are favorited.
 
-## Modules
+## Technologies
 
-1. express - used to run node.js.
-2. ejs - used for generating HTML with JavaScript.
-3. method-override - used to create the likes since it's a PUT method.
-4. morgan - terminal logger.
-5. path - used to join the public folder.
-6. pg-promise - used to link the database.
-7. body-parser - this allows us to parse all bodies to the HTML
-
-## Instructions
-
-1. You will need to git clone from Github my project.
-2. Once you have that, you will need to create a database named forum_app_db" in psql.
-3. Then go into the root folder of the project and type in psql -d forum_app_db -f migrations/migrations.sql
-4. Now that you created the database and the tables, you can now go into your localhost/3000/topic to run the project while nodemon is runnings.
+1. React - Used to build out front end
+2. Express/node - Used to build out back end
+3. Yelp API - Used to get data
