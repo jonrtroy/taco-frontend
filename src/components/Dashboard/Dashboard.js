@@ -65,10 +65,10 @@ class Dashboard extends Component {
           if(data[i].rating >= 4) {
             // push the data into the empty array
             ratingFour.push(data[i]);
-            console.log('RATINGFOUR', ratingFour);
+            // console.log('RATINGFOUR', ratingFour);
           }
         }
-        console.log('RATING', ratingFour);
+        // console.log('RATING', ratingFour);
         this.setState({
           // randomly selecting from the array to get a taco restaurant
           tacos: ratingFour[(Math.floor(Math.random() * ((ratingFour.length - 1) - 0) + 0))],
@@ -78,7 +78,7 @@ class Dashboard extends Component {
       });
     })
     .catch((err) => {
-      console.log('ERROR: ', err);
+      // console.log('ERROR: ', err);
     });
   });
 }
@@ -115,7 +115,7 @@ class Dashboard extends Component {
       });
     })
     .catch((err) => {
-      console.log('ERROR: ', err);
+      // console.log('ERROR: ', err);
     });
   }
 
@@ -145,7 +145,7 @@ class Dashboard extends Component {
           this.props.router.push('/user/favorite');
         })
         .catch((err) => {
-          console.log('ERROR:', err);
+          // console.log('ERROR:', err);
         });
       } else {
         this.props.router.push('/login');
